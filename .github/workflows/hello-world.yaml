@@ -1,5 +1,5 @@
 name: Hello world samle workflow
-'on': Push
+'on': push
 jobs:
   hello-job:
     runs-on: ubuntu-latest
