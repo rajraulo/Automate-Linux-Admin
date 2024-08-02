@@ -10,4 +10,7 @@ jobs:
       - name: List
         run: ls
 
+      - name: cat etc/hosts file
+        run: cat /etc/hosts
+
   
