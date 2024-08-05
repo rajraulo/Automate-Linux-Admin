@@ -12,5 +12,3 @@ jobs:
 
       - name: cat etc/hosts file
         run: cat /etc/hosts
-
-  
