@@ -12,7 +12,7 @@ jobs:
 
       - name: cat etc/hosts file
         run: cat /etc/hosts
-        
+
       - name: Check file and replace line
         ansible.builtin.linefile:
           path: /etc/hosts
