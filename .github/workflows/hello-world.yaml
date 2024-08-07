@@ -6,21 +6,26 @@ on:
         description: "Switch-Over Date"
         default: "DDMMYYYY"
         required: true
-        
+
 jobs:
   hello-job:
-    runs-on: [self-hosted, Linux, X64, dev]
+    runs-on: 
+      labels: [self-hosted, Linux, X64, dev]
 #    runs-on: ubuntu-latest
     steps:
       - name: Echo text
         run: 'echo "Hello, world!"'
+
   List-Job:
-    runs-on: [self-hosted, Linux, X64, dev]
+    runs-on: 
+      labels: [self-hosted, Linux, X64, dev]
     steps:
       - name: List
         run: ls
+
   CAT_JOB:
-    runs-on: [self-hosted, Linux, X64, dev]
+    runs-on: 
+      labels: [self-hosted, Linux, X64, dev]
     steps:
       - name: cat etc/hosts file
         run: cat /etc/hosts
