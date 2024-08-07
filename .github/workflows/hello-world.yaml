@@ -14,8 +14,8 @@ jobs:
       - name: cat etc/hosts file
         run: cat /etc/hosts
 
-      - name: Check file and replace line
-        ansible.builtin.linefile:
-          path: /etc/hosts
-          insertafter: '127.0.0.1 localhost'
-          line: '198.162.23.2 myvm'
+#      - name: Check file and replace line
+#        ansible.builtin.linefile:
+#          path: /etc/hosts
+#          insertafter: '127.0.0.1 localhost'
+#          line: '198.162.23.2 myvm'
