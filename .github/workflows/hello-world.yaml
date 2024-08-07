@@ -2,7 +2,7 @@ name: Hello world samle workflow
 on: push
 jobs:
   hello-job:
-    runs-on: lingaraj-vm
+    runs-on: [self-hosted, Linux, X64, dev]
 #    runs-on: ubuntu-latest
     steps:
       - name: Echo text
