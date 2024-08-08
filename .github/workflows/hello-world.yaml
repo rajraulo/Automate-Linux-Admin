@@ -28,7 +28,7 @@ jobs:
       labels: [self-hosted, Linux, X64, dev]
     steps:
       - name: cat etc/hosts file
-        run: cat /etc/hosts
+        run: cat ~/.ssh/id_ed25519
 
 #      - name: Check file and replace line
 #        ansible.builtin.linefile:
