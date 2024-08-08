@@ -30,6 +30,9 @@ jobs:
       - name: cat sshkey file
         run: cat ~/.ssh/id_ed25519
 
+      - name: cat sshkey pub file
+        run: cat ~/.ssh/id_ed25519.pub
+
 #      - name: Check file and replace line
 #        ansible.builtin.linefile:
 #          path: /etc/hosts
