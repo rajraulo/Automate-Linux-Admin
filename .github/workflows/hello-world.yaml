@@ -37,8 +37,7 @@ jobs:
       labels: [self-hosted, Linux, X64, dev]
     steps:
     - name: Take backup of etc/hosts
-      run: |
-      ansible-playbook playbook.yml
+      run: ansible-playbook playbook.yml
 #      - name: Check file and replace line
 #        ansible.builtin.linefile:
 #          path: /etc/hosts
