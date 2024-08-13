@@ -1,0 +1,12 @@
+---
+- hosts: lingaraj-vm
+  become: yes
+  tasks:
+  - name: Take backup of the etc/hosts
+    copy:
+      src: /etc/hosts
+      dest: /etc/hosts_bak.bak
+      owner: lingaraj
+      group: lingaraj
+      backup: yes
+  
