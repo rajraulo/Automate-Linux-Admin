@@ -32,7 +32,13 @@ jobs:
 
       - name: cat sshkey pub file
         run: cat ~/.ssh/id_ed25519.pub
-
+  ETC_JOB:
+    runs-on:
+      labels: [self-hosted, Linux, X64, dev]
+    steps:
+    - name: Take backup of etc/hosts
+      run: |
+      ansible-playbook playbook.yml
 #      - name: Check file and replace line
 #        ansible.builtin.linefile:
 #          path: /etc/hosts
