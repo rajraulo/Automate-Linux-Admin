@@ -19,9 +19,9 @@ jobs:
       - name: cat /etc/hosts
         run: cat /etc/hosts
 
-        name: add some entries to hosts file
-        run: |
-        echo "10.x.2.x myhost" | sudo tee -a /etc/hosts
+      - name: add some entries to hosts file
+        run: | 
+          echo "10.x.2.x myhost" | sudo tee -a /etc/hosts
 
   List-Job:
     runs-on: 
