@@ -25,7 +25,12 @@ jobs:
 
       - name: Check what has been added
         run: cat /etc/hosts
-        
+
+      - name: Install ansible on runner
+        uses: alex-oleshkevich/setup-ansible@VERSION
+
+      - name: Check version of the ansible
+        run: ansible-playbook --version
       #- name: run the playbook
       #  run: ansible-playbook playbook.yml 
 
