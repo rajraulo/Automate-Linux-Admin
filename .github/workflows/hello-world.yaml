@@ -28,6 +28,8 @@ jobs:
 
       - name: Install ansible on runner
         uses: alex-oleshkevich/setup-ansible@VERSION
+        with:
+          version: "9.3.0"
 
       - name: Check version of the ansible
         run: ansible-playbook --version
