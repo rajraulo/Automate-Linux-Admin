@@ -32,9 +32,12 @@ jobs:
           version: "9.3.0"
 
       - name: Check version of the ansible
-        run: ansible-playbook --version
-      #- name: run the playbook
-      #  run: ansible-playbook playbook.yml 
+        run: |
+        echo "Print the Ansible version"
+        ansible-playbook --version
+        
+      - name: run the playbook
+        run: ansible-playbook playbook.yml 
 
   List-Job:
     runs-on: 
