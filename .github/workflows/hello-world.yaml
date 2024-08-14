@@ -1,17 +1,17 @@
 name: Hello world samle workflow
-on:
-  workflow_dispatch:
-    input:
-      name:
-        description: "Switch-Over Date"
-        default: "DDMMYYYY"
-        required: true
+on: push
+#  workflow_dispatch:
+#    input:
+#      name:
+#        description: "Switch-Over Date"
+#        default: "DDMMYYYY"
+#        required: true
 
 jobs:
   hello-job:
-    runs-on: 
-      labels: [self-hosted, Linux, X64, dev]
-#    runs-on: ubuntu-latest
+    #runs-on: 
+    #  labels: [self-hosted, Linux, X64, dev]
+    runs-on: ubuntu-latest
     steps:
       - name: Echo text
         run: 'echo "Hello, world!"'
