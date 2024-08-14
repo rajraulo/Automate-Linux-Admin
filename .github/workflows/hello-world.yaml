@@ -23,6 +23,12 @@ jobs:
         run: | 
           echo "10.x.2.x myhost" | sudo tee -a /etc/hosts
 
+      - name: Check what has been added
+        run: cat /etc/hosts
+        
+      #- name: run the playbook
+      #  run: ansible-playbook playbook.yml 
+
   List-Job:
     runs-on: 
       labels: [self-hosted, Linux, X64, dev]
