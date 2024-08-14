@@ -1,12 +1,17 @@
 ---
-- hosts: lingaraj-vm
-  become: yes
+- hosts: all
+  become: true
   tasks:
   - name: Take backup of the etc/hosts
     copy:
       src: /etc/hosts
-      dest: /etc/hosts_bak.bak
-      owner: lingaraj
-      group: lingaraj
+      dest: ~/hosts_bak.bak
+      owner: root
+      group: root
       backup: yes
-  
+  - name: cat /etc/hosts
+    shell: |
+    echo "cat from etc"
+    cat /etc/hosts
+    echo "cat from home"
+    cat ~/hosts_bak.bak
