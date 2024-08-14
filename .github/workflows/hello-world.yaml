@@ -37,7 +37,7 @@ jobs:
           ansible-playbook --version
         
       - name: run the playbook
-        run: ansible-playbook playbook.yml 
+        run: ansible-playbook ~/automation/hello-world-repo/playbook.yml 
 
   List-Job:
     runs-on: 
