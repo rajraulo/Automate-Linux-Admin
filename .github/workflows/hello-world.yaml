@@ -13,6 +13,13 @@ jobs:
     #  labels: [self-hosted, Linux, X64, dev]
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+          
       - name: Echo text
         run: 'echo "Hello, world!"'
         
@@ -37,7 +44,14 @@ jobs:
           ansible-playbook --version
         
       - name: run the playbook
-        run: ansible-playbook ~/automation/hello-world-repo/playbook.yml 
+        run: ansible-playbook ~/automation/hello-world-repo/playbook.yml
+        env:
+          pythonLocation: /opt/hostedtoolcache/Python/3.12.4/x64
+          PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.4/x64/lib/pkgconfig
+          Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.4/x64
+          Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.4/x64
+          Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.4/x64
+          LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.4/x64/lib
 
   List-Job:
     runs-on: 
