@@ -1,10 +1,21 @@
 name: Deploy with Ansible
 
 on:
-  push:
-    branches:
-      - main
+  #push:
+  #  branches:
+  #    - main
   workflow_dispatch:
+    input:
+      name:
+        description: "Switch-Over Date"
+        default: "DDMMYYYY"
+        required: true
+#    workflow_dispatch:
+#    input:
+#      name:
+#        description: "Switch-Over Date"
+#        default: "DDMMYYYY"
+#        required: true
 
 jobs:
   deploy:
