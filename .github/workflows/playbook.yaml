@@ -29,5 +29,5 @@
       backrefs: yes
   - name: cat etc from home
     shell: |
-    echo "cat hosts from home"
-    cat ~/hosts_bak.bak
+      echo "cat hosts from home"
+      cat ~/hosts_bak.bak
