@@ -11,15 +11,15 @@
       backup: yes
   - name: cat /etc/hosts
     shell: |
-    echo "cat hosts from etc"
-    cat /etc/hosts
-    echo "cat hosts from home"
-    cat ~/hosts_bak.bak
+      echo "cat hosts from etc"
+      cat /etc/hosts
+      echo "cat hosts from home"
+      cat ~/hosts_bak.bak
   - name: Append line at end
     run |
-    echo "10.20.30.40 lingaraj.ae" | sudo tee -a ~/.hosts_bak.bak
-    echo "Check whether line appended or not"
-    cat ~/.hosts_bak.bak
+      echo "10.20.30.40 lingaraj.ae" | sudo tee -a ~/.hosts_bak.bak
+      echo "Check whether line appended or not"
+      cat ~/.hosts_bak.bak
     
   - name: Change the Etc hosts entry
     linefile:
