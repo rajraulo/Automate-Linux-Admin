@@ -1,11 +1,11 @@
 name: Hello world samle workflow
-on: push
-#  workflow_dispatch:
-#    input:
-#      name:
-#        description: "Switch-Over Date"
-#        default: "DDMMYYYY"
-#        required: true
+on:
+  workflow_dispatch:
+    input:
+      name:
+        description: "Switch-Over Date"
+        default: "DDMMYYYY"
+        required: true
 
 jobs:
   hello-job:
