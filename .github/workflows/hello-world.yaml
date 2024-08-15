@@ -44,7 +44,7 @@ jobs:
           ansible-playbook --version
         
       - name: run the playbook
-        run: ansible-playbook /hello-world-repo/playbook.yml -vvv
+        run: ansible-playbook hello-world-repo/playbook.yml -vvv
         env:
           pythonLocation: /opt/hostedtoolcache/Python/3.12.4/x64
           PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.4/x64/lib/pkgconfig
@@ -58,23 +58,21 @@ jobs:
       labels: [self-hosted, Linux, X64, dev]
     steps:
       - name: List
-        run: ls
+        run: ls /home/lingaraj/automation/hello-world-repo/playbook.yml
 
   CAT_JOB:
     runs-on: 
       labels: [self-hosted, Linux, X64, dev]
     steps:
-      - name: cat sshkey file
-        run: cat ~/.ssh/id_ed25519
-
-      - name: cat sshkey pub file
-        run: cat ~/.ssh/id_ed25519.pub
+      - name: cat the playbook
+        run: cat /home/lingaraj/automation/hello-world-repo/playbook.yml
+        
   ETC_JOB:
     runs-on:
       labels: [self-hosted, Linux, X64, dev]
     steps:
-    - name: Take backup of etc/hosts
-      run: ansible-playbook /home/lingaraj/automation/hello-world-repo/.github/workflows/playbook.yaml
+    - name: Run the playbook from Ubuntu Virtual Machine
+      run: ansible-playbook /home/lingaraj/automation/hello-world-repo/playbook.yaml
 #      - name: Check file and replace line
 #        ansible.builtin.linefile:
 #          path: /etc/hosts
