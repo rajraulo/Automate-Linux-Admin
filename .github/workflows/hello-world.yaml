@@ -44,7 +44,7 @@ jobs:
           ansible-playbook --version
         
       - name: run the playbook
-        run: ansible-playbook ~/automation/hello-world-repo/playbook.yml -vvv
+        run: ansible-playbook https://github.com/rajraulo/hello-world-repo/playbook.yml -vvv
         env:
           pythonLocation: /opt/hostedtoolcache/Python/3.12.4/x64
           PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.4/x64/lib/pkgconfig
